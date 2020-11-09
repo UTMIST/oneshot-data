@@ -2,8 +2,6 @@
 
 The collection of raw and generated (with transformations) images from the original Omniglot Dataset.
 
-## Structure
-
 ## Setup
 
 Run the following command to initialize the following submodules.
@@ -18,7 +16,22 @@ git submodule update --init
 
 ## Usage
 
-* 
+List of original Omniglot datasets.
+
+- `images_background_small1`
+- `images_background_small2`
+- `images_background`
+- `images_evalution`
+- `strokes_background_small1`
+- `strokes_background_small2`
+- `strokes_background`
+- `strokes_evalution`
+
+To run preprocessing on a `<dataset>` from the list, issue the following command to generate the transformed data to `<output_dataset>`.
+
+```sh
+sh scripts/augment_wrapper.sh <dataset> <output_dataset>
+```
 
 ## References
 
