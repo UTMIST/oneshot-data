@@ -8,6 +8,7 @@ from PIL import Image
         
 def main():
     random.seed(311420)
+    torch.manual_seed(311420)
     root = os.getcwd()
     # print(root)
     root = os.path.join(root, 'data/images_background/')
