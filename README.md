@@ -33,6 +33,8 @@ To run preprocessing on a `<dataset>` from the list, issue the following command
 sh scripts/augment_wrapper.sh <dataset> <output_dataset>
 ```
 
+**Ensure that `<dataset>` and `<output_dataset>` do not have the same name.**
+
 ## References
 
 [Lake, B. M., Salakhutdinov, R., and Tenenbaum, J. B. (2015). Human-level concept learning through probabilistic program induction.](http://www.sciencemag.org/content/350/6266/1332.short) _Science_, 350(6266), 1332-1338.
