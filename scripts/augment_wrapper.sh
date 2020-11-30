@@ -8,6 +8,7 @@ fi
 source_path="./omniglot/python/$1.zip"
 target_path="$sandbox_dir/$1.zip"
 target_dir="$sandbox_dir/$1"
+result_dir="$sandbox_dir/$2"
 result_path="$sandbox_dir/$2.zip"
 
 if test -f $source_path; then
@@ -19,6 +20,6 @@ fi
 
 unzip "$target_path" -d "$sandbox_dir/"
 python scripts/augment.py $1
-
-zip $result_path -r "$target_dir"
-rm -rf $target_path $target_dir
+mv $target_dir $result_dir
+zip $result_path -r "$result_dir"
+rm -rf $target_path $result_dir
